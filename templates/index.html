@@ -8,27 +8,51 @@
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
+<style>      
+ body{
+            background-image: url("https://www.promohondacars.com/wp-content/uploads/2021/05/Model-Mobil-Keluaran-Terbaru-Honda-Tahun-2021.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100%;
+        }
+        .title{
+            text-align: center;
+            font-size: 2.5em;
+            color: #000;
+        }
+    </style>
+</head>
 </head>
 
 <body>
  <div class="login">
-	<h1>Prediksi Harga Mobil</h1>
+	<h1><center>Prediksi Harga Mobil</center></h1>
 
      <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
+    <center><form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="Tahun" placeholder="Tahun" required="required" />
         <input type="text" name="KM" placeholder="KM" required="required" />
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Prediksi Harga Mobil</button>
     </form>
-
+<h2>
    <br>
    <br>
    {{ prediction_text }}
-
+</center>
  </div>
-
+<style>
+   .login {
+	width: 800px;
+    	margin: 0 auto;
+	height: 250px;
+ 	padding: 15px;
+        border: 1px solid #ccc;
+ 	background-color:#C0C0C0;
+	}
+   </style>
 
 </body>
 </html>
