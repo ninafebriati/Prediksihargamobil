@@ -27,7 +27,7 @@ def predict():
     final_features = [np.array(int_features)/100]
     prediction = model.predict(final_features)
 
-    output = round(prediction[0], 0)
+    output = round(prediction[0])
 
     return render_template('index.html', prediction_text='Prediksi Harga Mobil adalah Rp {}'.format(output))
 
